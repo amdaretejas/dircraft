@@ -1,3 +1,41 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=69.5", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydircraft"
+version = "0.2.0"
+description = "Scaffold production-ready project folder structures from a CLI or from Python"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+authors = [{ name = "Tejas" }]
+keywords = ["cli", "scaffold", "project-generator", "boilerplate", "fastapi", "streamlit", "folder-structure"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/amdaretejas/dircraft"
+Repository = "https://github.com/amdaretejas/dircraft"
+Issues = "https://github.com/amdaretejas/dircraft/issues"
+
+[project.scripts]
+dircraft = "dircraft.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dircraft*"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]
